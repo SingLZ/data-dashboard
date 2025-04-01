@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  flex: 1; /* Make all cards take equal space */
+  margin: 0 10px; /* Add spacing between cards */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #16010100;
+  min-width: 200px; 
+  max-width: 300px;
+}
+
+.statistics-row {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: stretch; 
+  margin: 20px 0; 
+  gap: 20px;
+}
+
+
+.sideNav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #232323;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right {
+  margin-left: 25%; /* Add a left margin equal to the width of the SideNav */
+  flex: 1; /* Allow the right div to take the remaining space */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+}
