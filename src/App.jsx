@@ -4,7 +4,8 @@ import './App.css'
 import BreweryInfo from "./Components/BreweryInfo.jsx";
 import SideNav from "./Components/SideNav.jsx";
 import StatisticCard from "./Components/StatisticCard.jsx";
-
+import BreweryChart from './Components/BreweryChart.jsx';
+import BreweryBar from './Components/BreweryBar.jsx';
 
 function App() {
   const [list, setList] = useState(null);
@@ -83,6 +84,7 @@ function App() {
         <StatisticCard infoCategory="Unique Cities" info={uniqueCities} />
       </div>
       
+      <div className='table-chart'>
       <div className="whole-page">
         <input
         type="text"
@@ -166,12 +168,25 @@ function App() {
       )}
 
       </div>
+      <div className='visualization'>
+        <div className="chart">
+        <BreweryChart/>
+        </div>
+        <div className="bar">
+        <BreweryBar/>
+        </div>
+
+       </div> 
+      </div>
+
       </div>
 
 
       <SideNav/>
 
+    
       </div>
+      
     </>
   )
 }

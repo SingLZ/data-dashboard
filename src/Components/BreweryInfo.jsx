@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const BreweryInfo = ({ id, name, city, breweryType}) => {
@@ -28,8 +29,12 @@ const BreweryInfo = ({ id, name, city, breweryType}) => {
           "N/A"
         )}
       </td>
+      <td>
+        <Link to={`/BreweryDetails/${id}`}>
+          <button>View Details</button>
+        </Link>
+      </td>
     </tr>
-      );
-    };
+    )};
   export default BreweryInfo;
   
